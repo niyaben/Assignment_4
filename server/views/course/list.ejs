@@ -1,0 +1,83 @@
+<!-- Including the header partial -->
+<%- include ../partials/header.ejs %>
+<!-- Including the main navigation partial -->
+<%- include ../partials/main_nav.ejs %>
+
+<!-- Main content section -->
+<main class="container">
+    <div class="row">
+        <div class="offset-md-0 col-md-10">
+            <br><h1><%= title %> </h1>
+            <% if(typeof displayName=='string' && displayName) { %>
+                <a href="/course-list/add" class="btn btn-primary" role="button">
+                <i class ="fas fa-plus-circle"></i> Add a course </a>
+            <br>
+            <% } %>
+            <br>
+
+            </a>
+            <br><br>
+
+            <!-- Course list table -->
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Table header row -->
+                <tr class="d-flex">
+                <% if(typeof displayName=='string' && displayName) { %>
+                    <th class="text-center col-2">course_name</th>
+                    <th class="text-center col-2">course_number</th>
+                    <th class="text-center col-2">Prof_name</th>
+                    <th class="text-center col-2">intake</th>
+                    <th class="text-center col-4">Description</th>
+                    <th class="text-center col-1"></th>
+                    <th class="text-center col-1"></th>
+                    <% } else { %>
+                    <th class="text-center col-2">course_name</th>
+                    <th class="text-center col-2">course_number</th>
+                    <th class="text-center col-2">Prof_name</th>
+                    <th class="text-center col-2">intake</th>
+                    <th class="text-center col-4">Description</th>
+                    <% } %>
+                </tr>
+
+                <!-- Loop through each course in the CourseList -->
+                <% for(let count=0; count < CourseList.length; count++) { %>
+                    <!-- Table row for each course -->
+                    <tr class="d-flex">
+                        <% if(typeof displayName=='string' && displayName) { %>
+
+                        <td class="text-center col-2"><%= CourseList[count].course_name %></td>
+                        <td class="text-center col-2"><%= CourseList[count].course_number %></td>
+                        <td class="text-center col-2"><%= CourseList[count].Prof_name %></td>
+                        <td class="text-center col-2"><%= CourseList[count].intake %></td>
+                        <td class="text-center col-4"><%= CourseList[count].Description %></td>
+                        <!-- Edit button for each course -->
+                        <td class="text-center col-1">
+                            <a href="/course-list/edit/<%= CourseList[count]._id %>" 
+                                class="btn btn-primary btn-sm">
+                                <i class="fas fa-pencil-alt"></i> Edit
+                            </a>
+                        </td>
+                        <!-- Delete button for each course -->
+                        <td class="text-center col-1">
+                            <a href="/course-list/delete/<%= CourseList[count]._id %>" 
+                                class="btn btn-danger btn-sm">
+                                <i class="fas trash-alt"></i> Delete</a>
+                        </td>
+                        <% } else { %>
+            <td class="text-center col-2"><%= CourseList[count].course_name %></td>
+            <td class="text-center col-2"><%= CourseList[count].course_number %></td>
+            <td class="text-center col-2"><%= CourseList[count].Prof_name %></td>
+            <td class="text-center col-2"><%= CourseList[count].intake %></td>
+            <td class="text-center col-4"><%= CourseList[count].Description %></td>
+        <% } %>  
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+    </div>
+</main>
+
+<!-- Including the bottom navigation partial -->
+<%- include ../partials/bottom_nav.ejs %>
+<!-- Including the footer partial -->
+<%- include ../partials/footer.ejs %>

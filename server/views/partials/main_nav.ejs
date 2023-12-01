@@ -1,0 +1,87 @@
+<!--navbar-->
+
+<nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+  <!-- Container for the navbar  -->
+  <div class="container-fluid">
+    <!-- Brand and link to the home page -->
+    <a class="navbar-brand" href="/">Assignment 4</a>
+    
+    <!-- Navbar toggle button for mobile and tablet -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar content for links -->
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <!-- Unordered list for navigation links, aligned to the right -->
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+    
+ <!-- home Link -->
+ <!-- Abot Link -->
+ <!-- project Link -->
+ <!-- contact Link -->
+        <li class="nav-item">
+        <% if (title == "Home") {%>
+          <a class="nav-link active" href="/home">
+        <% } else { %>
+        <a class="nav-link" href="/home">
+        <% } %>
+          <i class="fa-solid fa-house-user"></i> Home</a>
+        </li>
+
+        <li class="nav-item">
+        <% if (title == "About me") {%>
+          <a class="nav-link activate" href="/aboutme">
+          <% } else { %>
+          <a class="nav-link" href="/aboutme">
+        <% } %>
+          <i class="fa-regular fa-address-card"></i> About me</a>
+        </li>
+
+        <li class="nav-item">
+        <% if (title == "Projects") {%>
+          <a class="nav-link activate" href="/projects">
+          <% } else { %>
+          <a class="nav-link" href="/projects">
+        <% } %>
+          <i class="fa-solid fa-shield-heart"></i> projects</a>
+        </li>
+ 
+        <li class="nav-item">
+        <% if (title == "Contact us") {%>
+          <a class="nav-link activate" href="/contactus">
+          <% } else { %>
+          <a class="nav-link" href="/contactus">
+        <% } %>
+          <i class="fa-solid fa-file-signature"></i> contact</a>
+        </li>
+
+        <li class="nav-item">
+        <% if (title == "Courses") {%>
+          <a class="nav-link active" href="/course-list">
+        <% } else { %>
+        <a class="nav-link" href="/course-list">
+        <% } %>
+          <i class="fa-solid fa-graduation-cap"></i>Courses</a>
+        </li>
+
+        <% if(typeof displayName == 'string' && displayName) { %>
+          <li class="navbar-text">
+            <i class="fas fa-lg fa-user"></i>
+            Welcome, <%= displayName %>
+          </li>
+          <li class="nav-item">
+              <a href="/logout" class="nav-link" >
+              <i class="fa-solid fa-sign-out-alt"></i> Logout</a>
+          </li>
+          <% } else { %>
+            <li class="nav-item">
+              <a href="/login" class="nav-link">
+              <i class="fa-solid fa-sign-in-alt"></i> Login</a>
+          </li>
+          <% } %>
+      
+    </div>
+  </div>
+</nav> 

@@ -1,0 +1,146 @@
+
+
+@media only screen and (min-width : 481px)
+and (max-width : 960px ) {
+/* styles.css */
+
+/* Reset some default browser styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #5b8f97;
+    color: white;
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 35px;
+}
+
+
+nav :hover {
+    color: #cbd7cd;
+    opacity: 0.5;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+    
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(210, 209, 209);
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Dela Gothic One', cursive;
+}
+
+
+main {
+    max-width: 960px;
+    background-color: rgb(109, 130, 144);
+    height: 1500px;
+    text-align: center;
+    font-family: 'Dela Gothic One', cursive;
+background: -moz-linear-gradient(top, #9a597a, #84404e);
+background: -webkit-linear-gradient(top, #9a597a, #84404e);
+background: -o-linear-gradient(top, #9a597a, #84404e);
+background: linear-gradient(top, #9a597a, #84404e);
+font-family: Verdana, Geneva, Arial, sans-serif
+}
+
+main h1{
+    text-decoration: none;
+    color: rgb(195, 180, 176);
+    font-weight: bold;
+    font-size: 35px;
+    font-family: 'Dela Gothic One', cursive;
+
+}
+article {
+
+    margin: 20px left;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(237, 13, 13, 0.1);
+    float: right;
+    
+}
+#right {
+    
+    float: none;
+    height: 400px;
+    width: 500px;
+    background: #53647b;
+    
+
+}
+#left {
+    
+    float: none;
+    height: 200px;
+    width: 200px;
+   
+}
+video {
+    width: 400px;
+    height: 450px;
+}
+
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #705b6d;
+    color: white;
+    font-family: 'Dela Gothic One', cursive;
+}
+
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #7a5050;
+    border-radius: 4px;
+}
+
+
+button[type="submit"] {
+    background-color: #54a4fa;
+    color: rgb(217, 227, 220);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #e34331;
+}
+.clear
+{
+clear: both;
+}
+
+}

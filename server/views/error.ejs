@@ -1,0 +1,13 @@
+<!--javascript for errors-->
+
+<%- include ./partials/header.ejs %>   <!-- Include the header  -->
+<%- include ./partials/main_nav.ejs %>   <!-- Include the main navigation -->
+
+<div class="container">
+    <h1><%= message %></h1>   <!-- Display a message -->
+    <h2><%= error.status %></h2>   <!-- Display the error status -->
+    <pre><%= error.stack %></pre>   <!-- Display the error stack trace -->
+</div>
+
+<%- include ./partials/bottom_nav.ejs %>   <!-- Include the bottom navigation -->
+<%- include ./partials/footer.ejs %>   <!-- Include the footer -->
